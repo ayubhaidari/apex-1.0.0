@@ -1,9 +1,10 @@
-/********** Template CSS **********/
+/********** Updated ABS Template CSS **********/
 :root {
-    --primary: #FDA12B;
+    --primary: #1e73be;    /* Updated to match ABS blue logo color */
     --secondary: #8D9297;
     --light: #F8F9FA;
     --dark: #182333;
+    --accent: #56b8e0;     /* Lighter blue for accents based on wave element */
 }
 
 .back-to-top {
@@ -35,7 +36,11 @@
     font-weight: 500;
     transition: .5s;
 }
-
+.btn-primary {
+    color: #000;
+    background-color: #182333;;
+    border-color: #182333;;
+}
 .btn.btn-primary,
 .btn.btn-outline-primary:hover {
     color: #FFFFFF;
@@ -354,4 +359,40 @@
 
 .footer .copyright a:hover {
     color: var(--primary);
+}
+
+/* Additional ABS-specific styling */
+.home-link.active {
+    color: var(--primary) !important;
+}
+
+.abs-wave {
+    position: relative;
+    overflow: hidden;
+}
+
+.abs-wave::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: var(--accent);
+    border-radius: 100% 100% 0 0;
+}
+
+/* Add highlight color for menu items */
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+}
+
+/* Update any orange accent colors to match ABS blue */
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
 }
